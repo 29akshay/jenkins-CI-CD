@@ -6,8 +6,8 @@ pipeline {
   environment {
     DOCKERHUB_CREDENTIALS = credentials('humancloudak')
   }
-  stage {
-    stage('Build'){
+  stages {
+    stage('Build') {
       steps {
         sh 'docker build -t myimage123 .'
       }
