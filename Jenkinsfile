@@ -1,7 +1,7 @@
 pipeline {
   agent any
   options { 
-    builddDiscarder(logRotator(numToKeepStr:'5'))
+    buildDiscarder(logRotator(numToKeepStr:'5'))
   }
   environment {
     DOCKERHUB_CREDENTIALS = credentials('humancloudak')
