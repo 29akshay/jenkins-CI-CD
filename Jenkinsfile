@@ -14,8 +14,8 @@ pipeline {
     }
     stage('Login') {
       steps {
-        sh 'echo $DOCKERHUB_CREDETIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-        //sh "docker login -u $DOCKERHUB_CREDENTIALS_USR -p humancloudak"
+        //sh 'echo $DOCKERHUB_CREDETIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+        sh "docker login -u $DOCKERHUB_CREDENTIALS_USR -p humancloudak"
       }
     }
     stage('Push') {
