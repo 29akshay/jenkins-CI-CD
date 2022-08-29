@@ -4,7 +4,7 @@ pipeline {
     buildDiscarder(logRotator(numToKeepStr:'5'))
   }
   environment {
-   DOCKERHUB_CREDENTIALS = credentials('humancloudak')
+   DOCKERHUB_CREDENTIALS = credentials('a55077d1-ddc9-4446-8609-dfdb8af68313')
   }
   stages {
     stage('Build') {
