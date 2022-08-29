@@ -15,8 +15,7 @@ pipeline {
     stage('Login') {
       steps {
         //sh 'echo $DOCKERHUB_CREDETIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-        //sh ("docker login -u $DOCKERHUB_CREDENTIALS_USR -p ${DOCKERHUB_CREDETIALS_PSW}")
-        sh ("curl -u $DOCKERHUB_CREDENTIALS_USR:${DOCKERHUB_CREDETIALS_PSW} https://hub.docker.com/")
+        sh ("docker login -u $DOCKERHUB_CREDENTIALS_USR -p ${DOCKERHUB_CREDETIALS_PSW}")
       }
     }
     stage('Push') {
