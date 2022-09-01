@@ -25,7 +25,7 @@ pipeline {
     }
     stage('Pull') {
       steps {
-        sh 'kubectl apply -f /home/ec2-user/pod1.yml'
+        sh 'kubectl apply -f pod1.yml'
       }
     }
   }
