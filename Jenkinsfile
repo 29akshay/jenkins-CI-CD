@@ -25,7 +25,7 @@ pipeline {
     }
     stage('Pull') {
       steps {
-        sh 'sudo kubectl apply -f pod1.yml'
+        sh 'kubectl get pods'
       }
     }
   }
