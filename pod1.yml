@@ -1,23 +1,25 @@
-kind: Deployment
 apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: mydeployments
+  name: nginx-deployment
+  labels:
+    app: nginx
 spec:
-  replicas: 1
+  replicas: 3
   selector:
-    matchLables:
-      name: k8scontainer
+    matchLabels:
+      app: nginx
   template:
     metadata:
-      name: testpod1
-      lables:
-        name:
+      labels:
+        app: nginx
     spec:
       containers:
-        - name: c00
-          image: httpd
-          ports:
-          - containerPort: 18989
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
 ---
 
 kind: Service
@@ -26,8 +28,8 @@ metadata:
   name: demoservice
 spec:
   ports:
-    - port: 18989
+    - port: 80
       targetPort: 18989
   selector:
-    name: k8scontainer
-  type: ClusterIP
+    app: nginx
+  type: NodePort
