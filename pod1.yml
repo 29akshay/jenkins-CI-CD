@@ -29,7 +29,7 @@ spec:
   replicas: 1
   selector:
     matchLables:
-      name: deployment
+      name: k8scontainer
   template:
     metadata:
       name: testpod1
@@ -52,5 +52,5 @@ spec:
     - port: 18989
       targetPort: 18989
   selector:
-    name: deployment
+    name: k8scontainer
   type: ClusterIP
