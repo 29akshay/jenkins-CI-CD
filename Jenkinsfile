@@ -25,7 +25,7 @@ pipeline {
     }
     stage('EKS config') {
       steps {
-        sh "aws eks update-kubeconfig --name eks-demo-cluster"
+        sh "aws eks update-kubeconfig --name eks-cluster"
       }
     }
     stage('Pull') {
