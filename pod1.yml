@@ -7,3 +7,15 @@ spec:
   - name: k8scontainer
     image: humancloudak/myimage123
   restartPolicy: Never
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  selector:
+    app.kubernetes.io/name: testpod
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
