@@ -8,6 +8,7 @@ spec:
     image: humancloudak/myimage123
   restartPolicy: Never
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -19,7 +20,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 9376
- ---
+---
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -41,6 +42,7 @@ spec:
           ports:
           - containerPort: 18989
 ---
+
 kind: Dervice
 apiVersion: v1
 metadata:
