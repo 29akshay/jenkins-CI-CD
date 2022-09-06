@@ -20,7 +20,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push humancloudak/poc1'
+        sh 'docker push humancloudak/myimage123'
       }
     }
     stage('EKS config') {
