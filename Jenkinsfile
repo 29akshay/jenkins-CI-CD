@@ -30,7 +30,7 @@ pipeline {
     }
     stage('Pull') {
       steps {
-        sh 'kubectl apply -f pod1.yaml'
+        sh 'kubectl apply -f pod1.yml'
       }
     }
   }
