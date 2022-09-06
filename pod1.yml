@@ -15,7 +15,7 @@ metadata:
   name: my-service
 spec:
   selector:
-    app.kubernetes.io/name: testpod
+    name: testpod
   ports:
     - protocol: TCP
       port: 80
