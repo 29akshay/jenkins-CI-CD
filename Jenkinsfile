@@ -23,6 +23,11 @@ pipeline {
         sh 'docker push humancloudak/poc1'
       }
     }
+    stage('EKS config') {
+      steps {
+        sh "aws eks update-kubeconfig --name eks-demo-cluster"
+      }
+    }
     stage('Pull') {
       steps {
         sh 'kubectl get pods'
