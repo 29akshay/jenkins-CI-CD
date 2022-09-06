@@ -4,6 +4,6 @@ metadata:
   name: testpod
 spec:
   containers:
-    name: k8scontainer
+  - name: k8scontainer
     image: humancloudak/poc1
   restartPolicy: Never
