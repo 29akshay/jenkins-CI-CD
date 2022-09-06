@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
   - name: k8scontainer
-    image: humancloudak/poc1
+    image: myimage123:latest
   restartPolicy: Never
