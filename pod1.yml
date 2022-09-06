@@ -39,7 +39,7 @@ spec:
         - name: c00
           image: httpd
           ports:
-          - containerPort: 80
+          - containerPort: 18989
 ---
 kind: Dervice
 apiVersion: v1
