@@ -20,6 +20,7 @@ pipeline {
     }
     stage('Push') {
       steps {
+        sh 'docker tag myimage123:latest humancloudak/myimage123:latest'
         sh 'docker push humancloudak/myimage123'
       }
     }
