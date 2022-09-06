@@ -30,7 +30,7 @@ pipeline {
     }
     stage('Pull') {
       steps {
-        sh 'kubectl apply -f https://github.com/29akshay/jenkins-CI-CD/blob/main/pod1.yml'
+        sh 'kubectl apply -f /var/lib/jenkins/workspace/ok/pod1.yaml'
       }
     }
   }
