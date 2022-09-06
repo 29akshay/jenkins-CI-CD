@@ -31,7 +31,7 @@ spec:
     matchLables:
       name: deployment
   template:
-    mwetadata:
+    metadata:
       name: testpod1
       lables:
         name:
